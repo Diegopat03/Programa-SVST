@@ -13,13 +13,13 @@ h1{
 
 
 body{
-    background-image: url(../imagenes/MenuGer.jpg);
+    background-image: url(/imagenes/MenuEmp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .botonemp{
-    margin: 20px;
+    margin: 10px;
     margin-left: 35%;
     width: 30%;
     padding: 5px;
@@ -45,7 +45,6 @@ body{
 
 .cerrarses{
     color: white;
-    position: absolute; left: 60%;
-    position: absolute; top: 11%;
-    font-size: 20px;
+    position: absolute; left: 62%;
+    position: absolute; top: 10%;
 }
