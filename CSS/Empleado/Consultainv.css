@@ -7,8 +7,8 @@ body{
 }
 
 .Consultainv{
-    width: 900px;
-    height: 900px;
+    width: 50%;
+    height: 50%;
     background: rgb(92, 86, 86);
     margin: 10px;
     position: absolute; left: 30%;
@@ -29,7 +29,7 @@ h2{
     font-size: 45px;
     text-align: center;
     position: absolute;
-    left: 17%;
+    left: 5%;
     top: 	10%;
 }
 
@@ -52,7 +52,7 @@ p{
 
 Table{
     background-color: rgb(255, 255, 255);
-    position: absolute; top: 43%;
+    position: sticky; top: 43%;
     margin: 25px;
     padding: 10px;
     border: 1px solid black;
