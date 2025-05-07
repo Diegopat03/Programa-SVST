@@ -2,15 +2,23 @@
 
 body{
     background-image: url(/imagenes/MenuEmp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
 }
 
 .ConsultaSurtido{
-    width: 1000px;
-    height: 900px;
-    background: rgb(92, 86, 86);
+    width: 50%;
+    height: 50%;
+    background: #fafafa10;
+    backdrop-filter: blur(00.4rem);
     margin: 10px;
     position: absolute; left: 30%;
-    border: 4px solid black;
+    border: 4px solid #fafafa10;
 
 }
 
