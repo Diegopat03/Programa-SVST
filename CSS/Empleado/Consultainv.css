@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body{
-    background-image: url(/imagenes/MenuEmp.jpg);
+    background-image: url(MenuEmp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -11,15 +11,24 @@ body{
     display: flex;
 }
 
-.Consultainv{
-    width: 50%;
-    height: 50%;
+h2{
+    width: 200px;
+}
+
+.Consultainventario{
+    overflow-x: auto;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
     background: #fafafa10;
-    backdrop-filter: blur(0.4rem);
+    backdrop-filter: blur(00.4rem);
     margin: 10px;
-    position: absolute; left: 30%;
+    position: relative; 
+    margin: 20px auto;
+    left: unset;
     border: 4px solid #fafafa10;
-    border-radius: 10px;
+    gap: 15px;
+    border-radius: 20px;
 
 }
 
@@ -31,59 +40,71 @@ body{
     border-radius: 10px;
 }
 
-h2{
+.Consultainventario h2{
     font-family: "Bangers", system-ui;
     font-size: 45px;
+    color: white;
+    letter-spacing: 1px;
     text-align: center;
-    position: absolute;
-    left: 5%;
-    top: 	10%;
+    position: relative;
+    left: 45%;
+    margin-top: 1px;
 }
 
-p{
+.Consultainventario .Btnbuscar{
+    padding: 5px 20px;
+    border-radius: 4px;
+
+}
+
+
+.Buscador{
     position: relative;
+    top: 1%;
+    margin: 0 auto;
     text-align: center;
-    position: relative;
-    top: 30%;
-    font-weight: bold ;
-    text-transform: uppercase;
+    padding: 20px;
+
 }
 
 .Consulta{
+
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+
+
+}
+
+h3{
+    display: inline;
     position: relative;
-    left: 35%;
-    top: 30%;
-    width: 30%;
-    border-radius: 6px;
+
 }
 
-Table{
-    background-color: rgb(255, 255, 255);
-    position: sticky; top: 43%;
-    margin: 25px;
-    padding: 10px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
+.Tela{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
+    padding: 15px;
 }
 
-
-
-th{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    background-color:rgb(87, 154, 218);
-}
-
-td{
-    border: 1px solid black;
-    border-collapse: collapse;
+.Tela p{
+    margin: 5px 0;
     padding: 5px;
 }
 
-tr{
-    text-align: center;
+.Lista{
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 20px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConsOrdenSurtido</title>
-    <link rel="stylesheet" href="/CSS/Empleado/Consultaordensurtido.css">
+    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/Consultaordensurtido.css">
 </head>
 <body>
 

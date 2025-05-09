@@ -1,63 +1,68 @@
+
+<?php
+
+$conexion = new mysqli("localhost", "root","", "svst12");
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
+}
+
+$resultados = [];
+
+if (isset($_GET['Consultar'])) {
+    $busqueda = $conexion->real_escape_string($_GET['Consultar']);
+
+    $sql = "SELECT * FROM tela WHERE Nombre_Tela LIKE '%$busqueda%'";
+    $res = $conexion->query($sql);
+
+    if ($res && $res->num_rows > 0) {
+        while ($fila = $res->fetch_assoc()) {
+            $resultados[] = $fila;
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consinventario</title>
-    <link rel="stylesheet" href="/CSS/Empleado/Consultainv.css">
+    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/Consultainv.css">
 </head>
 <body>
-<?php
-require 'bd.php';
 
-$resultados = [];
+    <div class="Consultainventario">
 
-if (isset($_GET['buscar'])) {
-    $buscar = "%" . $_GET['buscar'] . "%";
-    $sql = "SELECT * FROM productos WHERE nombre LIKE ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $buscar);
-    $stmt->execute();
-    $resultados = $stmt->get_result();
-}
-?>
+        <a href="/pagina_sena/HTML/Empleado/MENUempleado.php">
+        <button class="Botonatras" type="button">Atras</button>
+        </a>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Buscador de Inventario</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <h1>Buscar productos en inventario</h1>
-    <form method="GET">
-        <input type="text" name="buscar" placeholder="Nombre del producto" required>
-        <button type="submit">Buscar</button>
-    </form>
+        <h2>Que tela busca?</h2>
 
-    <?php if (!empty($resultados) && $resultados->num_rows > 0): ?>
-        <h2>Resultados:</h2>
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
-            </tr>
-            <?php while ($producto = $resultados->fetch_assoc()): ?>
-                <tr>
-                    <td><?= htmlspecialchars($producto['nombre']) ?></td>
-                    <td><?= htmlspecialchars($producto['descripcion']) ?></td>
-                    <td><?= $producto['cantidad'] ?></td>
-                    <td>$<?= $producto['precio'] ?></td>
-                </tr>
-            <?php endwhile; ?>
-        </table>
-    <?php elseif (isset($_GET['buscar'])): ?>
-        <p>No se encontraron productos con ese nombre.</p>
-    <?php endif; ?>
-</body>
-</html>
+        <form class="Buscador" method="GET" action="">
+            <input type="text" class="Consulta" name="Consultar" placeholder="Tela a buscar" value="<?= htmlspecialchars($_GET['Consultar'] ?? '') ?>">
+            <input type="submit" class="Btnbuscar" value="Buscar">
+        </form>
+
+        <?php if (!empty($resultados)): ?>
+        <div class="Lista">
+            <?php foreach ($resultados as $tela): ?>
+                <div class="Tela">
+                        <p> <?= htmlspecialchars($tela['Nombre_Tela']) ?> <br> </p>
+                        <p> <strong>Color:</strong> <?= htmlspecialchars($tela['Color']) ?> <br> </p>
+                        <p> <strong>Caracteristica: </strong> <?=htmlspecialchars($tela['Caracteristica']) ?> <br> </p>
+                        <p> <strong>Cantidad:</strong> <?= htmlspecialchars($tela['Cantidad_Tela']) ?> Metros<br> </p>
+                        <p> <strong>Precio:</strong>$<?= htmlspecialchars($tela['Precio']) ?> <br> </p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <?php elseif (isset($_GET['Consultar'])): ?>
+            <p class="error">No se encontraron productos.</p>
+        <?php endif; ?>
+
+    </div>
+
 </body>
 </html>

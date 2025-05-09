@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body{
-    background-image: url(/imagenes/MenuEmp.jpg);
+    background-image: url(MenuEmp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

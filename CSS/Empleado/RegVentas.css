@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body{
-    background-image: url(/imagenes/MenuEmp.jpg);
+    background-image: url(MenuEmp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -10,6 +10,15 @@ body{
     position: relative;
     display: flex;
 }
+
+.Botonatras{
+    position: relative;
+    left: 4%;
+    top: 4%;
+    padding: 5px 25px;
+    border-radius: 10px;
+}
+
 
 .bventa{
     width: 50%;
@@ -22,89 +31,34 @@ body{
 
 }
 
-h1{
+
+h2{
+    text-align: center;
     font-family: "Bangers", system-ui;
-    position: absolute; left: 35%;
-    position: absolute; top: 9%;
-    letter-spacing: 3px;
+    color: white;
+    letter-spacing: 1px;
+    padding-top: 8%;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 2%;
 
 }
 
-.Busqueda{
-    position: absolute; top: 22%;
-    position: absolute; left: 3%;
-    width: 300px;
-    border: 2px solid black;
-    padding: 4px;
-    border-radius: 10px;
-}
-
-.idproducto{
-    position: absolute; top: 16%;
-    position: absolute; left: 3%;
-    font-weight: bold;
-}
-
-.Botonatras{
+.Formventa{
     position: relative;
-    left: 4%;
-    top: 4%;
-    padding: 5px 25px;
-    border-radius: 10px;
-}
-
-Table{
-    background-color: rgb(255, 255, 255);
-    position: absolute; top: 25%;
-    margin: 25px;
-    padding: 10px;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-    background-color:rgb(180, 211, 240);
-}
-
-td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-}
-
-tr{
+    margin: auto;
     text-align: center;
+    
 }
 
-.Texto{
-    position: absolute; top: 46%;
-    margin-left: 3%;
-    width: 300px;
-    font-weight: bold;
+.Formventa p{
+    color: white;
 }
 
-.Cajatext{
-    width: 300px;
-    border: 2px solid black;
-    padding: 4px;
-    border-radius: 10px;
-}
 
-.Totalpedido{
-    text-align: center;
-    position: relative;
-    left: 85%;
-    right: 85%;
-}
+.btonventa{
 
-.RegistrarV{
-    position: relative;
-    left: 350px;
-    right: 350px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 4px solid black;
+    padding: 5px 20px;
+    border-radius: 4px;
+
 }

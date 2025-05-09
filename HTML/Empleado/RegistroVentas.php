@@ -1,3 +1,14 @@
+<?php
+
+$conexion = new mysqli("localhost", "root","", "svst12");
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,58 +24,30 @@
         <button class="Botonatras" type="button">Atras</button>
         </a>
 
-        <h1>Registro de Ventas</h1>
+        <h2>Registro de ventas</h2>
+        <br>
 
-        <p class="idproducto">ID DE PRODUCTO:</p>
+        <form action="" method="POST" class="Formventa">
 
-        <input class="Busqueda" type="text">
+            <p>ID del producto: </p>
+            <input type="text" name="ID_producto">
+            <p>Nombre de empleado: </p>
+            <input type="text" name="Nombre_empleado">
+            <p>Nombre de Cliente: </p>
+            <input type="text" name="Nombre_cliente">
+            <p>Cedula de Cliente: </p>
+            <input type="text" name="Cedula_cliente">
+            <p>Cantidad del pedido: </p>
+            <input type="number" name="Cantidad">
+            <br>
+            <br>
 
-        <table>
-            <tr>
-                <th>id</th>
-                <th>Nombre de Producto</th>
-                <th>Color</th>
-                <th>Caracteristica de Estampado</th>
-                <th>Cantidad Disponible (Metros)</th>
-                <th>Valor por metro</th>
-            </tr>
-            <tr>
-                <td>123456</td>
-                <td>Lino</td>
-                <td>Blanco</td>
-                <td>No</td>
-                <td>150</td>
-                <td>14500</td>
-            </tr>
-            <tr>
-                <td>123ejemplo</td>
-                <td>Nombre ejemplo</td>
-                <td>azul</td>
-                <td>No</td>
-                <td>89</td>
-                <td>11000</td>
-            </tr>
-        </table><br>
+            <input class="btonventa" type="submit" value="Registrar Venta">
 
-        <div class="Texto">
-        <p>Nombre Empleado:</p><br>
 
-        <p>Nombre Cliente</p>
-        <input class="Cajatext" type="text">
+        </form>
 
-        <p>Cedula Cliente</p>
-        <input class="Cajatext" type="text">
 
-        <p>Cantidad pedido</p>
-        <input class="Cajatext" type="text">
-
-        <p class="Totalpedido">Valor Total Pedido: </p>
-
-        <p class="Totalpedido">$ 0</p>
-
-        <input class="RegistrarV" type="submit" value="Registrar Venta">
-        
-        </div>  
 
     </div>
 
