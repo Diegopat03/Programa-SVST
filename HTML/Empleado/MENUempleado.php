@@ -26,7 +26,5 @@
     </a>
 
 
-    <p><a class="contactarger" href="contactargerente.com">Contactar Gerente </a></p>
-
 </body>
 </html>

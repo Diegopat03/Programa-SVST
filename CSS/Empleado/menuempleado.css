@@ -16,6 +16,7 @@ body{
     background-image: url(MenuEmp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .botonemp{
@@ -32,15 +33,6 @@ body{
     padding: 10px;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-.contactarger{
-    color: rgb(255, 255, 255);
-    margin-left: 57%;
-    margin-top: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 21px;
-
 }
 
 .cerrarses{
