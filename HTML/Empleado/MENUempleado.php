@@ -11,7 +11,7 @@
 
     <a class="cerrarses" href="/pagina_sena/inicio_sesion.php">Cerrar Sesion</a>
 
-    <h1>Hola usuario que deseas hacer?</h1>
+    <h1>Hola que deseas hacer?</h1>
 
     <a href="/pagina_sena/HTML/Empleado/RegistroVentas.php">
     <button class="botonemp"  type="button">Registro de Ventas</button><br>

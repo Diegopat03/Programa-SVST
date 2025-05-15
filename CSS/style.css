@@ -10,9 +10,14 @@ h1 {
 }
 
 body{
-    background-image: url(../imagenes/Menuprincipal.jpg);
+    background-image: url(Menuprincipal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: block;
+    width: 100%;
+    height:100%;
 }
 
 .sesion{

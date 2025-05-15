@@ -17,6 +17,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .botonemp{
@@ -37,6 +38,6 @@ body{
 
 .cerrarses{
     color: white;
-    position: absolute; left: 62%;
-    position: absolute; top: 10%;
+    position: relative; left: 62%;
+    position: relative; top: 10%;
 }
