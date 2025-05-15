@@ -14,24 +14,23 @@
         </a>
 
         <h2>Registro de ventas</h2>
-        <br>
 
         <form action="Regventa.php" method="POST" class="Formventa">
 
             <p>ID del producto: </p>
-            <input type="text" name="ID_producto">
+            <input type="text" name="ID_producto" class="inputs">
             <P>Nombre de tela: </P>
-            <input type="text" name="Nombretela">
+            <input type="text" name="Nombretela" class="inputs">
             <p>Nombre de empleado: </p>
-            <input type="text" name="Nombre_empleado">
+            <input type="text" name="Nombre_empleado" class="inputs">
             <p>Cedula Empleado: </p>
-            <input type="text" name="Cedula_Empleado">
+            <input type="text" name="Cedula_Empleado" class="inputs">
             <p>Nombre de Cliente: </p>
-            <input type="text" name="Nombre_cliente">
+            <input type="text" name="Nombre_cliente" class="inputs">
             <p>Cedula de Cliente: </p>
-            <input type="text" name="Cedula_cliente">
+            <input type="text" name="Cedula_cliente" class="inputs" >
             <p>Cantidad del pedido: </p>
-            <input type="number" name="Cantidad">
+            <input type="number" name="Cantidad" class="inputs">
             <br>
             <br>
 

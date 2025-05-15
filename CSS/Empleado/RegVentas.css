@@ -60,8 +60,18 @@ h2{
     position: relative;
     margin: auto;
     text-align: center;
-    
+    box-sizing: content-box;
 }
+
+
+.inputs{
+    margin: auto;
+    border-radius: 6px;
+    border: 0%;
+    outline: none;
+    padding: 8px 8px;
+}
+
 
 .Formventa p{
     color: white;

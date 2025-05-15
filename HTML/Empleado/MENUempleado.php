@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Empleado</title>
-    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/menuempleado.css">
+    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/menuempleado1.css">
     
 </head>
 <body>

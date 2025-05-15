@@ -46,6 +46,9 @@ if (isset($_GET['Consultar'])) {
             <input type="submit" class="Btnbuscar" value="Buscar">
         </form>
 
+        <br>
+        <br>
+
         <?php if (!empty($resultados)): ?>
         <div class="Lista">
             <?php foreach ($resultados as $tela): ?>
@@ -58,6 +61,8 @@ if (isset($_GET['Consultar'])) {
                 </div>
             <?php endforeach; ?>
         </div>
+        <br>
+        <br>
         <?php elseif (isset($_GET['Consultar'])): ?>
             <p class="error">No se encontraron productos.</p>
         <?php endif; ?>
