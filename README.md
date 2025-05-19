@@ -49,7 +49,7 @@ mysql -u root -p svst12 < svst12.sql
 ```bash
 http://localhost
 ```
-
+- Abrir el archivo `inicio_sesion.php` e ingresar los datos de inicio de sesion.
 
 
 
