@@ -1,0 +1,21 @@
+# Proyecto Local - Sistema de Venta y Surtido de Telas
+
+Este proyecto es un sistema con el cual se buscar ayudar en la gestion de un establecimiento dedicado a la venta de textiles, este permite la venta de los productos, la consulta de inventario del establecimiento, consultar las ordenes para surtir los productos faltantes, ademas de la gestion de los usuarios registrados actualmente en el establecimiento, este proyecto esta desarrollado con distintas herramientas de desarrollo web:
+- Frontend: HTML, CSS.
+- Backend: PHP.
+- Base de datos: MySQL.
+
+---
+
+## Requisitos minimos
+
+Para poder instalar el proyecto se requiere tener los siguientes programa o dependencias instalados en el dispositivo:
+
+- MySQL instalado y funcionando (Local o Remoto).
+- Git instalado.
+- Editor de codigo recomendado: Visual Studio Code
+
+---
+
+## Configuracion e instalación:
+
