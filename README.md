@@ -75,8 +75,8 @@ Este proyecto esta con la licencia **MIT**.
 
 Para cualquier sugerencia o pregunta acerca del proyecto puedes contactarme:
 
-GITHUB: Diegopat03
-jdegop1234@gmail.com
+- GITHUB: Diegopat03
+- jdegop1234@gmail.com
 
 
 
