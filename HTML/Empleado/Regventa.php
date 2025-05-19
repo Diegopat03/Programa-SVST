@@ -25,7 +25,9 @@ if ($stock_actual === null) {
 } elseif ($stock_actual < $cantidad) {
     echo "No hay suficiente stock disponible.";
 } else {
+
     // Insertar cliente si no existe
+    
     $vercliente = $conexion->prepare("SELECT Cedula_Cliente FROM cliente WHERE Cedula_Cliente = ?");
     $vercliente->bind_param("i", $cedula);
     $vercliente->execute();
@@ -62,7 +64,7 @@ if ($stock_actual === null) {
     while ($resultado_pedido->num_rows > 0) {
         $random = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 4);
         $numero_pedido = $fecha . $random;
-        $verificar_pedido->bind_param("s", $numero_pedido); // volver a asociar
+        $verificar_pedido->bind_param("s", $numero_pedido);
         $verificar_pedido->execute();
         $resultado_pedido = $verificar_pedido->get_result();
     }
@@ -70,7 +72,7 @@ if ($stock_actual === null) {
     // Calcular valor total
     $valor_total = $Precio * $cantidad;
 
-    // Insertar pedido con Valor_Pedido
+    // Registrar pedido 
     $insertar = $conexion->prepare("INSERT INTO pedido (ID_Tela, Nombre_Tela, Nombre_empleado, Empleado_ID, Nombre_cliente, Cedula_cliente, Cantidad, ID_Pedido, Valor_Pedido) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $insertar->bind_param("isssiisid", $IDproducto, $Nomtela, $empleado, $empleado_id, $cliente, $cedula, $cantidad, $numero_pedido, $valor_total);
     $insertar->execute();
