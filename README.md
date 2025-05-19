@@ -34,4 +34,17 @@ git clone https://github.com/Diegopat03/Programa-SVST.git
 https://windows.php.net/downloads/releases/php-8.2.28-nts-Win32-vs16-x64.zip
 ```
 
+### 3. Importar Base de datos MYSQL
+
+- Abrir el gestor de la base de datos (phpmyadminm, etc)
+- Importa el archivo `svst12.sql` el cual esta en el repositorio
+```bash
+mysql -u root -p svst12 < svst12.sql
+```
+
+---
+
+## Tecnologias utilizadas
+
+
 
