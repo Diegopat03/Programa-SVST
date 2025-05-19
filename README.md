@@ -44,7 +44,27 @@ mysql -u root -p svst12 < svst12.sql
 
 ---
 
-## Tecnologias utilizadas
+## Herramientas y/o Tecnologias utilizadas
+
+| Herramienta | Descripción |
+|    :---:    |    :---:    |
+|  `HTML/CSS` |  Interfaz de usuario      |
+|   `PHP`     |  Logica Backend e interaccion con base de datos       |
+|   `MySQL`   |  Base de datos relacional |
+
+---
+
+## Licencia
+
+Este proyecto esta con la licencia **MIT**.
+
+---
+
+## Contacto
+
+Para cualquier sugerencia o pregunta acerca del proyecto puedes contactarme:
+
+jdegop1234@gmail.com
 
 
 
