@@ -25,7 +25,7 @@ Pasos a seguir para instalar y ejecutar el proyecto de venta y surtido de telas:
 ### 1. Clonar el repositorio
 
 ```bash
-
+git clone https://github.com/Diegopat03/Programa-SVST.git
 ```
 
 ### 2. Descargar PHP
@@ -33,4 +33,5 @@ Pasos a seguir para instalar y ejecutar el proyecto de venta y surtido de telas:
 ```bash
 https://windows.php.net/downloads/releases/php-8.2.28-nts-Win32-vs16-x64.zip
 ```
+
 
