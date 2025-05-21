@@ -55,7 +55,7 @@ if ($stock_actual === null) {
     $random = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 4);
     $numero_pedido = $fecha . $random;
 
-    // Verificar que el ID de pedido no exista
+    
     $verificar_pedido = $conexion->prepare("SELECT ID_Pedido FROM pedido WHERE ID_Pedido = ?");
     $verificar_pedido->bind_param("s", $numero_pedido);
     $verificar_pedido->execute();
