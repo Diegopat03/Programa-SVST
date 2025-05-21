@@ -51,8 +51,10 @@ mysql -u root -p svst12 < svst12.sql
 http://localhost
 ```
 - Abrir el archivo `inicio_sesion.php` e ingresar los datos de inicio de sesion.
-
-
+- Credenciales de acceso:
+```bash
+usuario: Admin , Contraseña: 1234 
+```
 
 ---
 
