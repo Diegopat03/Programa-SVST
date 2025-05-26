@@ -30,14 +30,15 @@ git clone https://github.com/Diegopat03/Programa-SVST.git
 
 ### 2. Descargar PHP
 
+Para compilar el codigo del proyecto correctamente.
+
 ```bash
 https://windows.php.net/downloads/releases/php-8.2.28-nts-Win32-vs16-x64.zip
 ```
 
-
 ### 3. Importar Base de datos MYSQL
 
-- Abrir el gestor de la base de datos (phpmyadminm, etc)
+- Abrir el gestor de la base de datos phpmyadmin y verificar que este funcionando correctamente.
 - Importa el archivo `svst12.sql` el cual esta en el repositorio
 ```bash
 mysql -u root -p svst12 < svst12.sql
@@ -50,8 +51,10 @@ mysql -u root -p svst12 < svst12.sql
 http://localhost
 ```
 - Abrir el archivo `inicio_sesion.php` e ingresar los datos de inicio de sesion.
-
-
+- Credenciales de acceso:
+```bash
+usuario: Admin , Contraseña: 1234 
+```
 
 ---
 

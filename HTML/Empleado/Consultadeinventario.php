@@ -1,7 +1,7 @@
 
 <?php
 
-$conexion = new mysqli("localhost", "root","", "svst12");
+$conexion = new mysqli("sql108.infinityfree.com", "	if0_39085983", "8ao9HhOoEOS", "if0_39085983_svst");
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
