@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {
+
+    header("Location: /pagina_sena/inicio_sesion.php");
+    exit();
+    
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

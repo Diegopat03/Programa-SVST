@@ -8,19 +8,18 @@ if ($conexion->connect_error) {
 $tela = $conexion->query("SELECT ID_Tela, Nombre_Tela FROM tela");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro_de_Ventas</title>
-    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/RegVentas.css">
+    <link rel="stylesheet" href="/pagina_sena/CSS/Gerente/RegVentas.css">
 </head>
 <body>
 
     <div class="bventa">
-        <a href="/pagina_sena/HTML/Empleado/MENUempleado.php">
+        <a href="/pagina_sena/HTML/Gerente/MenuGerente.php">
         <button class="Botonatras" type="button">Atras</button>
         </a>
 
@@ -28,8 +27,7 @@ $tela = $conexion->query("SELECT ID_Tela, Nombre_Tela FROM tela");
 
         <form action="Regventa.php" method="POST" class="Formventa">
 
-            <p>Seleccionar la tela:</p>
-
+            <p>Seleccione el producto:</p>
 
             <select name="ID_producto" class="inputs" required>
 
@@ -39,9 +37,7 @@ $tela = $conexion->query("SELECT ID_Tela, Nombre_Tela FROM tela");
                         <?= $fila['ID_Tela'] ?>-<?= $fila['Nombre_Tela'] ?>
                     </option>
                 <?php endwhile; ?>
-
             </select>
-
 
             <p>Nombre de empleado: </p>
             <input type="text" name="Nombre_empleado" class="inputs">

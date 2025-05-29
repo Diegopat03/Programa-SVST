@@ -16,11 +16,22 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    header("Location: /pagina_sena/HTML/Empleado/MENUempleado.php");
+    $usuario = $result->fetch_assoc();
+
+    // Guardar usuario y rol en sesión
+    $_SESSION['usuario'] = $usuario['usuarios'];
+    $_SESSION['rol'] = $usuario['Rol'];
+
+    // LOGIN Rol
+    if ($usuario['Rol'] === 'Gerente') {
+        header("Location: /pagina_sena/HTML/Gerente/MENUgerente.php");
+    } elseif ($usuario['Rol'] === 'Empleado') {
+        header("Location: /pagina_sena/HTML/Empleado/MENUempleado.php");
+    } else {
+        echo "Rol no reconocido.";
+    }
     exit();
 } else {
-
     echo "Usuario o contraseña incorrectos.";
-    
 }
 ?>

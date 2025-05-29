@@ -74,7 +74,7 @@ if ($stock_actual === null) {
 
     // Registrar pedido 
     $insertar = $conexion->prepare("INSERT INTO pedido (ID_Tela, Nombre_Tela, Nombre_empleado, Empleado_ID, Nombre_cliente, Cedula_cliente, Cantidad, ID_Pedido, Valor_Pedido) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $insertar->bind_param("issssisid", $IDproducto, $Nomtela, $empleado, $empleado_id, $cliente, $cedula, $cantidad, $numero_pedido, $valor_total);
+    $insertar->bind_param("isssiisid", $IDproducto, $Nomtela, $empleado, $empleado_id, $cliente, $cedula, $cantidad, $numero_pedido, $valor_total);
     $insertar->execute();
 
     // Actualizar inventario

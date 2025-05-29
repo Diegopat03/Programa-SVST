@@ -1,9 +1,9 @@
 <?php
 
-$host = "sql108.infinityfree.com";
-$usuario = "if0_39085983"; 
-$contrasena = "8ao9HhOoEOS";
-$bd = "if0_39085983_svst";
+$host = "localhost";
+$usuario = "root"; 
+$contrasena = "";
+$bd = "svst12";
 
 $conn = new mysqli($host, $usuario, $contrasena, $base_datos);
 

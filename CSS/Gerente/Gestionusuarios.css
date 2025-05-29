@@ -12,19 +12,21 @@ h1{
 }
 
 body{
-    background-image: url(/imagenes/MenuGer.jpg);
+    background-image: url(MenuGer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .Gestionusuario{
     width: 50%;
-    height: 70%;
+    height: 900px;
     background: #fafafa10;
-    backdrop-filter: blur(0.4rem);
     margin: 10px;
-    position: absolute; left: 30%;
+    position: relative; left: 25%;
     border: 4px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
 }
 
 .Botonatras{
