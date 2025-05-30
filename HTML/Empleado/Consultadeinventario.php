@@ -1,4 +1,5 @@
 <?php
+//Verificacion de Rol en la pagina, solo podra acceder al modulo el rol de Gerente
 
 session_start();
 
@@ -9,8 +10,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {
     
 }
 
+//Conexion con Base de datos
 
 include("../../bd.php");
+
+//Busca el producto relacionado a lo escrito en el input
 
 $resultados = [];
 

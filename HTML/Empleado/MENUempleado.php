@@ -1,4 +1,7 @@
 <?php
+
+// Restriccion de Rol en la pagina, debe de estar logeado para poder acceder al  modulo
+
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {

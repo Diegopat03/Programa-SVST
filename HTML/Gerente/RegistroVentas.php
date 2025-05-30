@@ -1,5 +1,6 @@
 <?php
 
+//Conexion con la base de datos
 
 include("../../bd.php");
 

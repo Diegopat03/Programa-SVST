@@ -1,7 +1,9 @@
 <?php
 
-
+// Conexion base de datos
 include("../../bd.php");
+
+//Busca el producto relacionado a lo escrito en el input
 
 $resultados = [];
 
@@ -46,6 +48,9 @@ if (isset($_GET['Consultar'])) {
         <br>
         <br>
 
+
+        <!-- Muestra en forma de lista el inventario actual del establecimiento -->
+         
         <?php if (!empty($resultados)): ?>
         <div class="Lista">
             <?php foreach ($resultados as $tela): ?>

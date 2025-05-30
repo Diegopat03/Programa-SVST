@@ -1,8 +1,9 @@
 <?php
 
-
+// Conexion con Base de datos
 include("../../bd.php");
 
+// Trae los datos ingresado en el formulario de registrar ventas
 
 $IDproducto = $_POST['ID_producto'];
 $empleado = $_POST['Nombre_empleado'];

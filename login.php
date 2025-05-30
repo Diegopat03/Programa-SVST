@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
@@ -24,7 +25,7 @@ if ($result->num_rows > 0) {
 
     // LOGIN Rol
     if ($usuario['Rol'] === 'Gerente') {
-        header("Location: /pagina_sena/HTML/Gerente/MENUgerente.php");
+        header("Location: /pagina_sena/HTML/Gerente/Menugerente.php");
     } elseif ($usuario['Rol'] === 'Empleado') {
         header("Location: /pagina_sena/HTML/Empleado/MENUempleado.php");
     } else {

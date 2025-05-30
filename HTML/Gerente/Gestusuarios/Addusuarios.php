@@ -1,5 +1,7 @@
 <?php
 
+//Verificacion de Rol en la pagina, solo podra acceder al modulo el rol de Gerente
+
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Gerente') {
@@ -9,8 +11,11 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Gerente') {
 
 }
 
+// Conexion con Base de datos
+
 include("../../../bd.php");
 
+// Ingresa al nuevo usuario mediante una consulta SQL
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -81,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="Confirmacion">
 
         <?php
+
 
         if (isset($_GET['mensaje'])) {
             if ($_GET['mensaje'] == 'ok') {

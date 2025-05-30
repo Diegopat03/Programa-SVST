@@ -1,4 +1,7 @@
 <?php
+
+//Verificacion de Rol en la pagina, solo podra acceder al modulo el rol de Gerente
+
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Gerente') {

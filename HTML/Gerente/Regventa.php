@@ -1,5 +1,6 @@
 <?php
 
+//Conexion con Base de datos
 
 include("../../bd.php");
 
@@ -18,6 +19,8 @@ $consultainv->execute();
 $consultainv->bind_result($stock_actual, $Nomtela, $Precio);
 $consultainv->fetch();
 $consultainv->close();
+
+//Mensaje que se muestra en productos no existentes o sin existencias
 
 if ($stock_actual === null) {
     echo "Producto no encontrado.";
@@ -51,22 +54,16 @@ if ($stock_actual === null) {
 
     // Generar ID de pedido único
     $fecha = date("Ymd");
-    $random = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 4);
-    $numero_pedido = $fecha . $random;
-
-    // Verificar que el ID de pedido no exista
-    $verificar_pedido = $conexion->prepare("SELECT ID_Pedido FROM pedido WHERE ID_Pedido = ?");
-    $verificar_pedido->bind_param("s", $numero_pedido);
-    $verificar_pedido->execute();
-    $resultado_pedido = $verificar_pedido->get_result();
-
-    while ($resultado_pedido->num_rows > 0) {
+    do {
         $random = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 4);
         $numero_pedido = $fecha . $random;
+
+        $verificar_pedido = $conexion->prepare("SELECT ID_Pedido FROM pedido WHERE ID_Pedido = ?");
         $verificar_pedido->bind_param("s", $numero_pedido);
         $verificar_pedido->execute();
         $resultado_pedido = $verificar_pedido->get_result();
-    }
+    } while ($resultado_pedido->num_rows > 0);
+
 
     // Calcular valor total
     $valor_total = $Precio * $cantidad;

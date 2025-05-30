@@ -1,5 +1,10 @@
 <?php
+
+// Conexion con Base de datos
+
 include("../../../../bd.php");
+
+//Trae los datos ingresados del formulario de addusuarios.php
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
