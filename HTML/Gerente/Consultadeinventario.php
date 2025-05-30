@@ -28,13 +28,13 @@ if (isset($_GET['Consultar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consinventario</title>
-    <link rel="stylesheet" href="/pagina_sena/CSS/Empleado/Consultainv.css">
+    <link rel="stylesheet" href="/pagina_sena/CSS/Gerente/Consultainv.css">
 </head>
 <body>
 
     <div class="Consultainventario">
 
-        <a href="/pagina_sena/HTML/Empleado/MENUempleado.php">
+        <a href="/pagina_sena/HTML/Gerente/MenuGerente.php">
         <button class="Botonatras" type="button">Atras</button>
         </a>
 
@@ -56,7 +56,7 @@ if (isset($_GET['Consultar'])) {
                         <p> <strong>Color:</strong> <?= htmlspecialchars($tela['Color']) ?> <br> </p>
                         <p> <strong>Caracteristica: </strong> <?=htmlspecialchars($tela['Caracteristica']) ?> <br> </p>
                         <p> <strong>Cantidad:</strong> <?= htmlspecialchars($tela['Cantidad_Tela']) ?> Metros<br> </p>
-                        <p> <strong>Precio:</strong>$<?= htmlspecialchars($tela['Precio']) ?> por metro<br> </p>
+                        <p> <strong>Precio:</strong>$<?= htmlspecialchars($tela['Precio']) ?> <br> </p>
                 </div>
             <?php endforeach; ?>
         </div>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{
+    background-image: url(MenuGer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+h2{
+    width: 200px;
+}
+
+.Consultainventario{
+    overflow-x: auto;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+    background: #fafafa10;
+    backdrop-filter: blur(00.4rem);
+    margin: 10px;
+    position: relative; 
+    margin: 20px auto;
+    left: unset;
+    border: 4px solid #fafafa10;
+    gap: 15px;
+    border-radius: 20px;
+
+}
+
+.Botonatras{
+    position: relative;
+    left: 4%;
+    top: 4%;
+    padding: 5px 25px;
+    border-radius: 10px;
+}
+
+.Consultainventario h2{
+    font-family: "Bangers", system-ui;
+    font-size: 45px;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    left: 45%;
+    margin-top: 1px;
+}
+
+.Consultainventario .Btnbuscar{
+    padding: 5px 20px;
+    border-radius: 4px;
+
+}
+
+
+.Buscador{
+    position: relative;
+    top: 1%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.Consulta{
+
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+
+}
+
+h3{
+    display: inline;
+    position: relative;
+
+}
+
+.Tela{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
+    padding: 15px;
+}
+
+.Tela p{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.Lista{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+}

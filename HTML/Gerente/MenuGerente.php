@@ -29,8 +29,9 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Gerente') {
     <button class="botonemp"  type="button">Gestionar Usuarios</button><br>
     </a>
 
-
-    <button class="botonemp" type="button">Registro Orden de Surtido</button><br>
+    <a href="/pagina_sena/HTML/Gerente/Consultadeinventario.php">
+    <button class="botonemp" type="button">Consulta Inventario</button><br>
+    </a>
 
 
     <a href="/pagina_sena/HTML/Gerente/RegistroVentas.php">

@@ -46,7 +46,7 @@ $tela = $conexion->query("SELECT ID_Tela, Nombre_Tela FROM tela");
             <p>Nombre de empleado: </p>
             <input type="text" name="Nombre_empleado" class="inputs">
             <p>Cedula Empleado: </p>
-            <input type="text" name="Cedula_Empleado" class="inputs">
+            <input type="number" name="Cedula_Empleado" class="inputs">
             <p>Nombre de Cliente: </p>
             <input type="text" name="Nombre_cliente" class="inputs">
             <p>Cedula de Cliente: </p>

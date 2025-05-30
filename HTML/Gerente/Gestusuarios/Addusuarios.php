@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST" class="Formadd" action="/pagina_sena/HTML/Gerente/Gestusuarios/Funciones/Add.php">
 
         <p>Cedula:</p> 
-        <input type="int" name="Cedula" class="inputs" required><br>
+        <input type="number" name="Cedula" class="inputs" required><br>
 
         <p>Nombre:</p> 
         <input type="text" name="Nombre" class="inputs" required> <br>
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="email" name="correo" class="inputs" required><br>
 
         <p>Teléfono:</p> 
-        <input type="int" name="telefono" class="inputs" required><br>
+        <input type="number" name="telefono" class="inputs" required><br>
 
         <p>Rol:</p>
             <select name="rol" class="inputs" required>
@@ -66,6 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Guardar" class="btonguardar">
 
+        <div class="Confirmacion">
+
         <?php
 
         if (isset($_GET['mensaje'])) {
@@ -77,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         ?>
+        </div>
 
     </form>
 
