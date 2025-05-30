@@ -1,9 +1,8 @@
 <?php
 
-$conexion = new mysqli("localhost", "root", "", "svst12");
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-}
+
+include("../../bd.php");
+
 
 $IDproducto = $_POST['ID_producto'];
 $empleado = $_POST['Nombre_empleado'];

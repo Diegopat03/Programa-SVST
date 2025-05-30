@@ -10,7 +10,7 @@ $password = $_POST['pass'] ?? '';
 
 
 $sql = "SELECT * FROM empleado WHERE usuarios = ? AND clave = ?";
-$stmt = $conn->prepare($sql);
+$stmt = $conexion->prepare($sql);
 $stmt->bind_param("ss", $username, $password);
 $stmt->execute();
 $result = $stmt->get_result();

@@ -1,5 +1,17 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pagina_sena/bd.php';
+
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Gerente') {
+
+    header("Location: /pagina_sena/inicio_sesion.php");
+    exit();
+
+}
+
+include("../../../bd.php");
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuarios"];
@@ -10,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO empleado (usuarios, Correo_Empleado, Telefono_Empleado, Rol, clave) 
             VALUES ('$usuario', '$correo', '$telefono', '$rol', '$clave')";
-    $conn->query($sql);
+    $conexion->query($sql);
     header("Location: funcion.php");
 }
 

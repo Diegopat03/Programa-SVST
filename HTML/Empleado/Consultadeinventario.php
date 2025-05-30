@@ -1,9 +1,16 @@
 <?php
 
-$conexion = new mysqli("localhost", "root", "", "svst12");
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {
+
+    header("Location: /pagina_sena/inicio_sesion.php");
+    exit();
+    
 }
+
+
+include("../../bd.php");
 
 $resultados = [];
 

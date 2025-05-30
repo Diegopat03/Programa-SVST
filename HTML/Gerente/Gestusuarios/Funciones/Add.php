@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/pagina_sena/bd.php';
+include("../../../../bd.php");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cedula = $_POST["Cedula"];
@@ -10,10 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rol = $_POST["rol"];
     $clave = $_POST["clave"];
 
+// Consulta sql para añadir usuarios a la base de datos
+
     $sql = "INSERT INTO empleado (Cedula_Empleado, Nombre, usuarios, Correo_Empleado, Telefono_Empleado, Rol, clave)
             VALUES ('$cedula', '$nombre', '$usuarios', '$correo', '$telefono', '$rol', '$clave')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conexion->query($sql) === TRUE) {
         header("Location: /pagina_sena/HTML/Gerente/Gestusuarios/Addusuarios.php?msg=ok");
         exit;
     } else {

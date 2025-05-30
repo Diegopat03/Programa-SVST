@@ -1,9 +1,8 @@
 <?php
 
-$conexion = new mysqli("localhost", "root", "", "svst12");
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-}
+
+include("../../bd.php");
+
 
 $tela = $conexion->query("SELECT ID_Tela, Nombre_Tela FROM tela");
 ?>

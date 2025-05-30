@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{
+    background-image: url(MenuGer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2{
+    text-align: center;
+    font-family: "Bangers", system-ui;
+    color: white;
+    letter-spacing: 1px;
+    padding-top: 8%;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.Botonatras{
+    position: relative;
+    left: 4%;
+    top: 4%;
+    padding: 5px 25px;
+    border-radius: 10px;
+}
+
+
+.Elimusuario{
+
+    width: 50%;
+    height: 900px;
+    background: #fafafa10;
+    margin: 10px;
+    position: absolute; left: 25%;
+    border: 4px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
+
+}
+
+.Tabla{
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+
+}
+
+.Tabla td{
+    width: 20%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.Elim{
+
+    padding: 5px 20px;
+    border-radius: 4px;
+
+}
