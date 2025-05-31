@@ -1,16 +1,14 @@
 <?php
 
-//Conexion con Base de datos
-
+// Conexion con Base de datos
 include("../../bd.php");
 
-
-$IDproducto = $_POST['ID_producto'];
-$empleado = $_POST['Nombre_empleado'];
-$empleado_id = $_POST['Cedula_Empleado'];
-$cliente = $_POST['Nombre_cliente'];
-$cedula = $_POST['Cedula_cliente'];
-$cantidad = $_POST['Cantidad'];
+$IDproducto   = $_POST['ID_producto'];
+$empleado     = $_POST['Nombre_empleado'];
+$empleado_id  = $_POST['Cedula_Empleado'];
+$cliente      = $_POST['Nombre_cliente'];
+$cedula       = $_POST['Cedula_cliente'];
+$cantidad     = $_POST['Cantidad'];
 
 // Verificar stock y obtener nombre y precio
 $consultainv = $conexion->prepare("SELECT Cantidad_Tela, Nombre_Tela, Precio FROM tela WHERE ID_Tela = ?");
@@ -20,8 +18,6 @@ $consultainv->bind_result($stock_actual, $Nomtela, $Precio);
 $consultainv->fetch();
 $consultainv->close();
 
-//Mensaje que se muestra en productos no existentes o sin existencias
-
 if ($stock_actual === null) {
     echo "Producto no encontrado.";
 } elseif ($stock_actual < $cantidad) {
@@ -29,7 +25,6 @@ if ($stock_actual === null) {
 } else {
 
     // Insertar cliente si no existe
-    
     $vercliente = $conexion->prepare("SELECT Cedula_Cliente FROM cliente WHERE Cedula_Cliente = ?");
     $vercliente->bind_param("i", $cedula);
     $vercliente->execute();
@@ -52,26 +47,17 @@ if ($stock_actual === null) {
         exit;
     }
 
-    // Generar ID de pedido único
-    $fecha = date("Ymd");
-    do {
-        $random = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 4);
-        $numero_pedido = $fecha . $random;
-
-        $verificar_pedido = $conexion->prepare("SELECT ID_Pedido FROM pedido WHERE ID_Pedido = ?");
-        $verificar_pedido->bind_param("s", $numero_pedido);
-        $verificar_pedido->execute();
-        $resultado_pedido = $verificar_pedido->get_result();
-    } while ($resultado_pedido->num_rows > 0);
-
-
     // Calcular valor total
     $valor_total = $Precio * $cantidad;
 
-    // Registrar pedido 
-    $insertar = $conexion->prepare("INSERT INTO pedido (ID_Tela, Nombre_Tela, Nombre_empleado, Empleado_ID, Nombre_cliente, Cedula_cliente, Cantidad, ID_Pedido, Valor_Pedido) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $insertar->bind_param("isssiisid", $IDproducto, $Nomtela, $empleado, $empleado_id, $cliente, $cedula, $cantidad, $numero_pedido, $valor_total);
+    // Insertar pedido 
+    $insertar = $conexion->prepare("INSERT INTO pedido (ID_Tela, Nombre_Tela, Nombre_empleado, Empleado_ID, Nombre_cliente, Cedula_cliente, Cantidad, Valor_Pedido)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $insertar->bind_param("isssiisd", $IDproducto, $Nomtela, $empleado, $empleado_id, $cliente, $cedula, $cantidad, $valor_total);
     $insertar->execute();
+
+    // Obtener el ID del pedido generado automáticamente
+    $numero_pedido = $conexion->insert_id;
 
     // Actualizar inventario
     $nueva_cantidad = $stock_actual - $cantidad;
