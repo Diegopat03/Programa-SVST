@@ -12,15 +12,15 @@ body{
     display: flex;
 }
 
-.ConsultaSurtido{
-    width: 50%;
-    height: 50%;
-    background: #fafafa10;
-    backdrop-filter: blur(00.4rem);
-    margin: 10px;
-    position: absolute; left: 30%;
-    border: 4px solid #fafafa10;
-
+h2{
+    text-align: center;
+    font-family: "Bangers", system-ui;
+    color: white;
+    letter-spacing: 1px;
+    padding-top: 8%;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 2%;
 }
 
 .Botonatras{
@@ -32,56 +32,41 @@ body{
 }
 
 
-h2{
-    font-family: "Bangers", system-ui;
-    font-size: 45px;
-    text-align: center;
-    position: absolute;
-    left: 38%;
-    top: 10%;
-}
 
-p{
-    position: relative;
-    text-align: center;
-    position: relative;
-    top: 30%;
-    font-weight: bold ;
-    text-transform: uppercase;
+.ConsultaSurtido{
+
+    width: 50%;
+    height: 900px;
+    background: #fafafa10;
+    margin: 10px;
+    position: absolute; left: 25%;
+    border: 4px solid #fafafa10;
+    backdrop-filter: blur(0.4rem);
+
+
 }
 
 
-Table{
-    background-color: rgb(255, 255, 255);
-    position: absolute; top: 40%;
-    margin: 25px;
-    padding: 10px;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+.Tabla{
 
-th{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 15px;
-    background-color:rgb(87, 154, 218);
-}
-
-td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-tr{
-    text-align: center;
-}
-
-.Proceder{
-    position: relative;
-    top: 65%;
-    left: 45%;
-    padding: 10px 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
     border-radius: 10px;
-    border: 4px solid black;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+
 }
+
+.Tabla td{
+    width: 20%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+}
+

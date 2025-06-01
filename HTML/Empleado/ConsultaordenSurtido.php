@@ -2,12 +2,16 @@
 session_start();
 
 if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {
-
     header("Location: /pagina_sena/inicio_sesion.php");
     exit();
-    
 }
 
+include("../../bd.php");
+
+// Consultar surtidos no confirmados
+$consulta = $conexion->prepare("SELECT ID_Surtido, ID_Tela, Nombre_Tela, Cantidad, Fecha, Cedula_Empleado, Observaciones, Confirmado FROM surtido WHERE Confirmado = 0");
+$consulta->execute();
+$resultado = $consulta->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -20,56 +24,47 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] !== 'Empleado') {
 </head>
 <body>
 
-    <div class="ConsultaSurtido">
-        <a href="/pagina_sena/HTML/Empleado/MENUempleado.php">
+<div class="ConsultaSurtido">
+
+    <a href="/pagina_sena/HTML/Empleado/MENUempleado.php">
         <button class="Botonatras" type="button">Atras</button>
         </a>
 
-        
-        <h2>Hola [usuario]</h2><br>
 
-        <p>Seleccione la orden a surtir:</p>
-        
 
-        <table>
+    <h2>Órdenes de Surtido</h2>
+    <br>
+    <br>
+    <table class="Tabla">
+        <thead>
             <tr>
-                <th>Seleccion</th>
-                <th>Orden de surtido:</th>
-                <th>Nombre</th>
-                <th>id</th>
-                <th>Color</th>
-                <th>Estampado (Si / No)</th>
-                <th>Caracteristica de Estampado</th>
-                <th>Cantidad a Surtir (Metros)</th>
+                <th>ID Surtido</th>
+                <th>Tela</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Observaciones</th>
+                <th>Acción</th>
             </tr>
+        </thead>
+        <tbody>
+        <?php while ($fila = $resultado->fetch_assoc()): ?>
             <tr>
-                <td><input type="checkbox"></td>
-                <td>1001</td>
-                <td>Piel de durazno</td>
-                <td>48541</td>
-                <td>Rojo</td>
-                <td>No</td>
-                <td>No</td>
-                <td>100</td>
+                <td><?= htmlspecialchars($fila['ID_Surtido']) ?></td>
+                <td><?= htmlspecialchars($fila['ID_Tela'] . ' - ' . $fila['Nombre_Tela']) ?></td>
+                <td><?= htmlspecialchars($fila['Cantidad']) ?></td>
+                <td><?= htmlspecialchars($fila['Fecha']) ?></td>
+                <td><?= htmlspecialchars($fila['Observaciones']) ?></td>
+                <td>
+                    <form method="POST" action="Confirmarsurtido.php">
+                        <input type="hidden" name="ID_Surtido" value="<?= $fila['ID_Surtido'] ?>">
+                        <input type="submit" value="Completar">
+                    </form>
+                </td>
             </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>1002</td>
-                <td>Nombre Ejemplo</td>
-                <td>17894</td>
-                <td>azul</td>
-                <td>Si</td>
-                <td>bomberos</td>
-                <td>200</td>
-            </tr>
-        </table><br>
-
-        <br>
-
-        <input class="Proceder" type="submit" value="Proceder">
-
-    </div>
-
+        <?php endwhile; ?>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
